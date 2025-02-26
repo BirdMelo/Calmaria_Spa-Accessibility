@@ -109,7 +109,7 @@
       </section>
 
       <section class="container container__cards">
-        <div class="container__cards--card">
+        <article class="container__cards--card">
           <img src="./assets/icon-massagem.png" alt="" />
           <h3 class="container__cards--card-title">Massagens</h3>
           <img src="./assets/soft-star.png" alt="" />
@@ -192,7 +192,7 @@
             alt="Mulher em uma banheira com pétalas de rosa, com apenas mãos e pernas aparentes, segurando um livro e com uma bandeija com uvas e chá."
           />
         </div>
-        <div action="." class="container__contato--form">
+        <form action="." class="container__contato--form">
           <div class="container__contato--form-conteudo">
             <h5 class="container__contato--form-conteudo-titulo">
               Entre em contato
@@ -203,36 +203,36 @@
             </p>
           </div>
           <div class="container__contato--inputs">
-            <label>Nome</label>
-            <input type="text" />
-            <label>Email</label>
-            <input type="email" />
-            <label>Telefone</label>
-            <input type="text" />
-            <div>
-              <p class="container__contato--inputs--titulo">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" placeholder="Digite seu nome completo" name="nome" required/>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Digite seu email" name="email" required/>
+            <label for="telefone">Telefone</label>
+            <input id="telefone" type="text" placeholder="(XX) XXXX-XXXX" name="telefone" required/>
+            <fieldset>
+              <legend class="container__contato--inputs--titulo">
                 Prefere contato por:
-              </p>
+              </legend>
               <div class="container__contato--inputs--div">
                 <div>
-                  <input type="radio" />
-                  <label>Ligação</label>
+                  <input type="radio" id="ligacao" name="contato"/>
+                  <label for="ligacao">Ligação</label>
                 </div>
                 <div>
-                  <input type="radio" />
-                  <label>WhatsApp</label>
+                  <input type="radio" id="whatsapp" name="contato"/>
+                  <label for="whatsapp">WhatsApp</label>
                 </div>
                 <div>
-                  <input type="radio" />
-                  <label>Email</label>
+                  <input type="radio" id="email-contato" name="contato"/>
+                  <label for="email-contato">Email</label>
                 </div>
               </div>
-            </div>
-            <label>Mensagem</label>
-            <textarea type="text"></textarea>
+            </fieldset>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" type="text" placeholder="Escreva sua mensagem" maxlength="500"></textarea>
           </div>
           <button>Enviar</button>
-        </div>
+        </form>
       </section>
     </main>
 
